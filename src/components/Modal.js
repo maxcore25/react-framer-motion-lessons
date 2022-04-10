@@ -11,7 +11,7 @@ const backdrop = {
   },
 };
 
-const Modal = ({ showModal }) => {
+const Modal = ({ showModal, setShowModal }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
