@@ -17,6 +17,10 @@ const containerVariants = {
       staggerChildren: 0.4,
     },
   },
+  exit: {
+    x: '-100vw',
+    transition: { ease: 'easeInOut' },
+  },
 };
 
 const childVariants = {
@@ -39,14 +43,15 @@ const Order = ({ pizza }) => {
       className='container order'
       variants={containerVariants}
       initial='hidden'
-      animate='visible'>
+      animate='visible'
+      exit='exit'>
       {/* <AnimatePresence>
         {showTitle && (
           <motion.h2 exit={{ y: -1000 }}>Thank you for your order :)</motion.h2>
         )}
       </AnimatePresence> */}
 
-      <h2 exit={{ y: -1000 }}>Thank you for your order :)</h2>
+      <h2>Thank you for your order :)</h2>
 
       <motion.p variants={childVariants}>
         You ordered a {pizza.base} pizza with:

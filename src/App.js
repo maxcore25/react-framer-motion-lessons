@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <Header />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.key}>
           <Route path='/base'>
             <Base addBase={addBase} pizza={pizza} />
